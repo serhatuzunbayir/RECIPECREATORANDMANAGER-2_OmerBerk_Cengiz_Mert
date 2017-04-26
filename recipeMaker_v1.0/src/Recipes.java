@@ -2,25 +2,25 @@ import java.util.ArrayList;
 
 public class Recipes {
 	private String RecipeName;
-	private ArrayList<Food> includedMeteryals;
+	private ArrayList<Food> includedMaterials;
 	public String getRecipeName() {
 		return RecipeName;
 	}
 	public void setRecipeName(String recipeName) {
 		RecipeName = recipeName;
 	}
-	public void addMeteryal(Food meteryal){
+	public void addMaterial(Food meteryal){
 		includedMeteryals.add(meteryal);
 	}
-	public Food getMeteryal(int i){return includedMeteryals.get(i);}
+	public Food getMaterial(int i){return includedMaterials.get(i);}
 	public ArrayList<Food> getIncludedMeteryals() {
-		return includedMeteryals;
+		return includedMaterials;
 	}
-	public void setIncludedMeteryals(Food includedMeteryals) {
-		this.includedMeteryals.add(includedMeteryals);
+	public void setIncludedMaterials(Food includedMaterials) {
+		this.includedMaterials.add(includedMaterials);
 	}
 	public Recipes() {
 		RecipeName = "Unknown";
-		includedMeteryals = new ArrayList<Food>();
+		includedMaterials = new ArrayList<Food>();
 	}
 }
