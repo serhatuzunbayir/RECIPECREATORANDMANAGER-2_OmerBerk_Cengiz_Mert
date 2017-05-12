@@ -2,8 +2,8 @@ package test;
 import java.util.ArrayList;
 
 public class Recipes {
-	private String RecipeName;
-	private ArrayList<Food> includedMeteryals;
+	public String RecipeName; // we make it public to allow test 
+	public ArrayList<Food> includedMeteryals; // we make it public to allow test  
 	public String getRecipeName() {
 		return RecipeName;
 	}
@@ -19,8 +19,8 @@ public class Recipes {
 	public ArrayList<Food> getIncludedMeteryals() {
 		return includedMeteryals;
 	}
-	public Food setIncludedMeteryals(Food includedMeteryals) { // return types for testing (Default return type was void)
-		this.includedMeteryals.add(includedMeteryals);
+	public ArrayList<Food> setIncludedMeteryals(ArrayList<Food> includedMeteryals) { // return types for testing (Default return type was void)
+		this.includedMeteryals=includedMeteryals;
 		return includedMeteryals;
 	}
 	public Recipes() {

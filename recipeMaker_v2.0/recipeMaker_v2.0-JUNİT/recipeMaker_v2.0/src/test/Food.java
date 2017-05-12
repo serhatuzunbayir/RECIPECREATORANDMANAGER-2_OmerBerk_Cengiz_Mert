@@ -16,5 +16,5 @@ public class Food {
 		System.out.println("Unique ID has been sent!");
 		return this.uniqeID = uniqeID;
 	}
-	public Food(){FoodName="unknown";uniqeID=0;System.out.println("Food name is " + FoodName + " and uniqueid is " + uniqeID);}
+	public Food(){FoodName="unknown";uniqeID=0;System.out.println("\n\n Constructure Info : \n\nFood name is " + FoodName + " and uniqueid is " + uniqeID+"\n\n");}
 }

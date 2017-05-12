@@ -13,7 +13,7 @@ public class mainTestClass {
 			Food tempFood = new Food();
 			tempFood.setUniqeID(i);
 			tempFood.setFoodName(inputs.get(i));
-			tempObject.setIncludedMeteryals(tempFood);
+			tempObject.addMeteryal(tempFood);
 		}
 		return tempObject;
 	}
@@ -34,7 +34,7 @@ public class mainTestClass {
 		System.out.println("Recipe name has been saved succesfully!");// Test Case 12 
 		return tempArrayList;	
 	}
-	public void displayAllrecipes(ArrayList<Recipes> myRecipe){ // Display method , It displays all members in the ArrayList<Recipes> object
+	public boolean displayAllrecipes(ArrayList<Recipes> myRecipe){ // Display method , It displays all members in the ArrayList<Recipes> object
 		for(int i=0;i<myRecipe.size();i++)
 		{	
 				System.out.println("\nYou need to use these items to make ready " + myRecipe.get(i).getRecipeName() + " ; ");
@@ -43,7 +43,8 @@ public class mainTestClass {
 					System.out.print(myRecipe.get(i).getMeteryal(j).getFoodName());
 					if(!(j==myRecipe.get(i).getIncludedMeteryals().size()-1)){System.out.print(",");}
 				}
-		}	
+		}
+		return true;
 	}
 	public  Recipes findTheRecipe(ArrayList<Recipes> myRecipe,String SearchedFood){ // This method to search a recipe in the list.
 		Recipes searchedRecipe=null;
@@ -63,7 +64,7 @@ public class mainTestClass {
 		}
 		return searchedRecipe;	
 	}
-	public void main(String[] args) {
+	public int main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList<Recipes> recipList = new ArrayList<Recipes>(); // recipList holds our all recipes.
 		Scanner scanner = new Scanner(System.in);
@@ -109,6 +110,7 @@ public class mainTestClass {
 		while(selectedChoice.compareTo("31")!=0);
 		// FOR TEST CASE 17
 		System.out.println("\n\nProgram is terminated!....\n\n");
+		return 0;
 	}
 
 }
